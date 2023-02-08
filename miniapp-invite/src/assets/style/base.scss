@@ -1,0 +1,237 @@
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+code,
+image,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+canvas,
+footer,
+header,
+section,
+audio,
+video,
+input,
+button,
+textarea,
+select,
+option,
+view,
+cover-view {
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-stretch: normal;
+    box-sizing: border-box;
+}
+
+div,
+span,
+p,
+label,
+dl,
+ul,
+ol,
+dt,
+dd,
+li,
+input,
+button,
+textarea {
+
+    &::after,
+    &::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+    -webkit-appearance: none;
+    background: transparent;
+    color: transparent;
+}
+
+uni-scroll-view .uni-scroll-view::-webkit-scrollbar {
+    /* 隐藏滚动条，但依旧具备可以滚动的功能 */
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+    -webkit-appearance: none;
+    background: transparent;
+    color: transparent;
+}
+
+
+html {
+    >body {
+        font-family: PingFangSC,
+            -apple-system,
+            'Source Sans Pro',
+            BlinkMacSystemFont,
+            'Segoe UI',
+            Roboto,
+            'Helvetica Neue',
+            Arial,
+            sans-serif;
+        font-size: 14px;
+    }
+}
+
+image,
+cover-image {
+    display: block;
+    border: none;
+}
+
+iframe,
+button,
+form,
+textarea,
+video,
+audio,
+canvas {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button,
+div,
+iframe,
+span,
+a,
+image,
+canvas,
+video,
+audio,
+textarea,
+li,
+cover-image,
+input:not([type='checkbox']) {
+    -webkit-appearance: none;
+    /* 去除输入框内阴影 */
+    -moz-appearance: none;
+    /* 去除输入框内阴影 */
+    appearance: none;
+    /* 去除输入框内阴影 */
+    outline: none;
+    /* 去除输入框获得焦点时的阴影 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* 去除ios点击元素出现阴影 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+input:not([type='checkbox']) {
+    border: none;
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button::after {
+    border: initial;
+}
+
+[class *='flex'] {
+    display: flex;
+    display: -webkit-flex;
+
+    &[class *='-wrap'] {
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    &[class *='-center'] {
+        justify-content: center;
+    }
+
+    &[class *='-start'] {
+        justify-content: flex-start;
+    }
+
+    &[class *='-end'] {
+        justify-content: flex-end;
+    }
+
+    &[class *='-between'] {
+        justify-content: space-between;
+    }
+
+    &[class *='-around'] {
+        justify-content: space-around;
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+
+    &-left {
+        text-align: left;
+    }
+
+    &-right {
+        text-align: right;
+    }
+
+    &-ellipsis {
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &-ellipsis-2 {
+        overflow: hidden;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        /*要显示的行数*/
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+    }
+}
